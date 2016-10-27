@@ -1,0 +1,16 @@
+/si
+/ffmpeg/*
+/bin_Win32d
+/bin_Win32
+/bin_x64
+/bin_x64d
+
+
+
+ld.exe
+*.old
+msvc_proj/Debug
+msvc_proj/Release
+msvc_proj/*.db
+
+cygwin64/home/*

@@ -1,0 +1,165 @@
+=======
+libargp
+=======
+
+Argp is an interface for parsing unix-style argument vectors.
+
+Argp provides features unavailable in the more commonly used getopt
+interface. These features include automatically producing output in response to
+the '--help' and '--version' options, as described in the GNU coding
+standards. Using argp makes it less likely that programmers will neglect to
+implement these additional options or keep them up to date.
+
+Argp also provides the ability to merge several independently defined option
+parsers into one, mediating conflicts between them and making the result appear
+seamless. A library can export an argp option parser that user programs might
+employ in conjunction with their own option parsers, resulting in less work for
+the user programs. Some programs may use only argument parsers exported by
+libraries, thereby achieving consistent and efficient option-parsing for
+abstractions implemented by the libraries.
+
+The header file <argp.h> should be included to use argp.
+
+Source homepage:     http://www.gnu.org/s/gnulib/MODULES.html
+Source download:     git checkout; see below
+Upstream maintainer: bug-gnulib@gnu.org
+Cygwin maintainer:   Andrew Schulman <schulman.andrew@epa.gov>
+License:             LGPL; see COPYING and COPYING.LESSER for details.
+
+Please address questions and bug reports to the Cygwin mailing list
+<cygwin@cygwin.com>.
+
+-------------------------------------------------------------------------
+
+Using libargp:
+
+Argp comes from Gnulib in a form that's intended to be compiled statically into
+programs.  In Cygwin it's packaged as a shared library.  That works fine, on
+condition that you make one change to your code:
+
+If you set argp_program_version or argp_program_bug_address, it won't work to
+define them statically in your code headers, as is shown in the argp examples.
+Instead you have to reassign them at run-time, within main().
+
+For example, here is argp Example #2 as it appears in the Gnulib documentation
+(stripped of comments):
+
+  #include <argp.h>
+  #include <stdlib.h>
+     
+  const char *argp_program_version = "argp-ex2 1.0";
+  const char *argp_program_bug_address = "<bug-gnu-utils@gnu.org>";
+
+  static char doc[] = "Argp example #2 -- a pretty minimal program using argp";
+  static struct argp argp = { 0, 0, 0, doc };
+     
+  int main (int argc, char **argv)
+  {
+    argp_parse (&argp, argc, argv, 0, 0, 0);
+	exit(0);
+  }
+
+When the above example is compiled against -largp, the assignments for
+arpg_program_version and argp_program_bug_address have no effect (so there's no
+--version option or bug address help text).  Both variables are initialized to
+empty in the shared library, and the above assignments don't override that.  For
+the assignments to take effect, you have to move them inside of main(), as
+follows:
+
+  #include <argp.h>
+  #include <stdlib.h>
+
+  const char version[] = "argp-ex2 1.0";                /* Changed */
+  const char bug_address[] = "<bug-gnu-utils@gnu.org>"; /* Changed */
+
+  static char doc[] = "Argp example #2 -- a pretty minimal program using argp";
+  static struct argp argp = { 0, 0, 0, doc };
+     
+  int main (int argc, char **argv)
+  {
+    argp_program_version = version;         /* New */
+    argp_program_bug_address = bug_address; /* New */
+
+    argp_parse (&argp, argc, argv, 0, 0, 0);
+	exit(0);
+  }
+
+
+-------------------------------------------------------------------------
+
+Cygwin-specific notes for libargp:
+
+libargp is taken from Gnulib, which does not issue releases, so there is no
+canonical URL for downloading the source.  To get the source, check out a
+copy of Gnulib by running
+
+	git clone git://git.savannah.gnu.org/gnulib.git
+
+then extract the argp source by running e.g.
+
+	gnulib-tool --dir=libargp --lib=libargp --libtool --create-testdir argp
+
+The above will give you argp sources, and also a complete autoconf/automake
+build environment, i.e. configure script.  But the source files extracted in
+that way come with GPL licenses.  All of the source files can also be
+licensed under LGPL; to get them in that form, run
+
+	mkdir libargp-lgpl
+	touch libargp-lgpl/configure.ac
+	gnulib-tool --dir=libargp-lgpl --lib=libargp --libtool \
+	  --import --lgpl argp
+
+Then copy all of the source files from libargp-lgpl, which have LGPL
+licenses, into libargp from the previous step:
+
+	cp libargp-lgpl/lib/*.{c,h} libargp/gllib
+
+Now all of the files in libargp have LGPL-compatible licenses.
+
+-------------------------------------------------------------------------
+
+Runtime requirements:
+  cygwin
+
+Build requirements:
+  autoconf
+  automake
+  binutils
+  coreutils
+  cygport
+  gcc
+  make
+
+Build instructions:
+  tar -jxf libargp-20110921-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  cygport libargp-20110921-1.cygport all
+
+This will create:
+  /usr/src/libargp-20110921-1.tar.bz2
+  /usr/src/libargp-20110921-1-src.tar.bz2
+
+Or use 'cygport libargp-20110921-1.cygport prep' to get a patched source
+directory.
+
+-------------------------------------------------------------------------
+
+Files included in the binary distribution:
+
+  /usr/bin/cygargp-0.dll
+  /usr/include/argp.h
+  /usr/lib/libargp.dll.a
+  /usr/lib/libargp.la
+  /usr/share/doc/Cygwin/libargp.README (this file)
+  /usr/share/doc/libargp/COPYING
+  /usr/share/doc/libargp/COPYING.LESSER
+  /usr/share/doc/libargp/README.Cygwin (this file)
+
+-------------------------------------------------------------------------
+
+Cygwin version history:
+
+20110921-1:
+* Initial Cygwin release.

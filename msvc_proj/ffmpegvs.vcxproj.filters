@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="../FFmpeg/cmdutils.h" />
+    <ClInclude Include="../FFmpeg/cmdutils_common_opts.h" />
+    <ClInclude Include="../FFmpeg/ffmpeg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ffmpeg_patch.c" />
+    <ClCompile Include="../FFmpeg/cmdutils.c" />
+    <ClCompile Include="../FFmpeg/ffmpeg.c" />
+    <ClCompile Include="../FFmpeg/ffmpeg_filter.c" />
+    <ClCompile Include="../FFmpeg/ffmpeg_opt.c" />
+  </ItemGroup>
+</Project>

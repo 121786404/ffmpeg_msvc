@@ -1,0 +1,71 @@
+These people have contributed to the GNU grep. Those contributions are
+described in the version control logs.  If your name has been left out,
+if you'd rather not be listed, or if you'd prefer a different address
+be used, please send a note to the bug-report mailing list (as seen at
+end of e.g., grep --help).
+
+Adam Katz                           savannah@kopis.com
+Aharon Robbins                      arnold@skeeve.com
+Akim Demaille                       akim@epita.fr
+Alain Magloire                      alainm@rcsm.ee.mcgill.ca
+Allan McRae                         allan@archlinux.org
+Andreas Ley                         andy@rz.uni-karlsruhe.de
+Andreas Schwab                      schwab@suse.de
+Arnold D. Robbins                   arnold@skeeve.com
+Arnold Robbins                      arnold@skeeve.com
+Bastiaan "Darquan" Stougie          darquan@zonnet.nl
+behoffski                           behoffski@grouse.com.au
+Ben Elliston                        bje@cygnus.com
+Benno Schulenberg                   bensberg@justemail.net
+Bernd Strieder                      strieder@student.uni-kl.de
+Bernhard Rosenkraenzer              bero@arklinux.org
+Binary file (standard input) matches
+Bob Proulx                          rwp@hprwp.fc.hp.com
+Brian Youmans                       3diff@gnu.org
+Bruno Haible                        bruno@clisp.org
+Charles Levert                      charles_levert@gna.org
+Christian Boltz                     grep-bug@cboltz.de
+Christian Groessler                 cpg@aladdin.de
+Corinna Vinschen                    vinschen@redhat.com
+Dagobert Michelsen                  dam@opencsw.org
+Daisuke GOTO                        gotoh@m-design.com
+Dave Reisner                        d@falconindy.com
+David Clissold                      cliss@austin.ibm.com
+David J MacKenzie                   djm@catapult.va.pubnix.com
+David O'Brien                       obrien@freebsd.org
+Dmitry V. Levin                     ldv@altlinux.org
+'Drake' Daham Wang                  drakewang@gmail.com
+Egmont Koblinger                    egmont@gmail.com
+Eli Zaretskii                       eliz@gnu.org
+Eric Blake                          eblake@redhat.com
+Fernando Basso                      fernandobasso.br@gmail.com
+Florian La Roche                    laroche@redhat.com
+Jaroslav Škarvada                   jskarvad@redhat.com
+Javier Villavicencio                the_paya@gentoo.org
+Jim Meyering                        jim@meyering.net
+Johan Walles                        johan.walles@gmail.com
+Julian Foad                         julianfoad@btopenworld.com
+Karl Berry                          karl@gnu.org
+Matthew Burgess                     matthew@linuxfromscratch.org
+Mike Frysinger                      vapier@gentoo.org
+Mike Haertel                        mike@ducky.net
+Nicolas Vigier                      boklm@mars-attacks.org
+Norihiro Tanaka                     noritnk@kcn.ne.jp
+Pádraig Brady                       P@draigBrady.com
+Paolo Bonzini                       bonzini@gnu.org
+Patrick Boyd                        pboyd04@gmail.com
+Paul Eggert                         eggert@cs.ucla.edu
+Petr Písař                          petr.pisar@atlas.cz
+Petr Pisar                          ppisar@redhat.com
+Reuben Thomas                       rrt@sc3d.org
+Santiago Ruano Rincón               santiago@debian.org
+Stefano Lattarini                   stefano.lattarini@gmail.com
+Stepan Kasal                        kasal@ucw.cz
+Stephane Chazelas                   stephane.chazelas@gmail.com
+Tony Abou-Assaleh                   taa@acm.org
+Yuliy Pisetsky                      ypisetsky@fb.com
+Zev Weiss                           zev@bewilderbeest.net
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
