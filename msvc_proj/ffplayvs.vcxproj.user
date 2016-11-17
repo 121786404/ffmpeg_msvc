@@ -9,7 +9,7 @@ $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>-i clock.avi</LocalDebuggerCommandArguments>
-    <LocalDebuggerEnvironment>PATH=%PATH%;$(ProjectDir)..\bin_Win32d;$(ProjectDir)3rdParty\SDL-1.2.15\bin\x86
+    <LocalDebuggerEnvironment>PATH=%PATH%;$(ProjectDir)..\bin_Win32d;$(ProjectDir)3rdParty\SDL2-2.0.5\bin\x86
 $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
   </PropertyGroup>
 </Project>
