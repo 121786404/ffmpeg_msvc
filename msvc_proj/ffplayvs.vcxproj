@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\ffmpeg;3rdParty\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\bin_Win32d\lib;3rdParty\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\FFmpeg;3rdParty\SDL-1.2.15\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\bin_Win32d\lib;3rdParty\SDL-1.2.15\lib\x86;$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -80,8 +80,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\ffmpeg;3rdParty\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\bin_Win32\lib;3rdParty\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\FFmpeg;3rdParty\SDL-1.2.15\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\bin_Win32\lib;3rdParty\SDL-1.2.15\lib\x86;$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -99,7 +99,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Ws2_32.lib;Secur32.lib;strmbase.lib;Vfw32.lib;Shlwapi.lib;SDL2.lib;SDL2main.lib;swresample.lib;swscale.lib;avutil.lib;avformat.lib;avdevice.lib;avfilter.lib;avcodec.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;Secur32.lib;strmbase.lib;Vfw32.lib;Shlwapi.lib;SDL.lib;SDLmain.lib;swresample.lib;swscale.lib;avutil.lib;avformat.lib;avdevice.lib;avfilter.lib;avcodec.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:libcmt.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -132,7 +132,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Ws2_32.lib;Secur32.lib;strmbase.lib;Vfw32.lib;Shlwapi.lib;SDL2.lib;SDL2main.lib;swresample.lib;swscale.lib;avutil.lib;avformat.lib;avdevice.lib;avfilter.lib;avcodec.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;Secur32.lib;strmbase.lib;Vfw32.lib;Shlwapi.lib;SDL.lib;SDLmain.lib;swresample.lib;swscale.lib;avutil.lib;avformat.lib;avdevice.lib;avfilter.lib;avcodec.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:libcmt.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
